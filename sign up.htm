@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LOGIN</title>
+        <link rel="stylesheet" href="sign up.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="form-box">
+                <h1 id="title">Sign up</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                              <input type="text" placeholder="Name">
+                        </div>
+                        <div class="input-field">
+                              <input type="email" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                              <input type="password" placeholder="Password">
+                        </div>
+                        <p>Lost password? <a href="#">Click here!</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupbtn">Sign up</button>
+                        <button type="button" id="signinbtn" class="disable">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            let signupbtn = document.getElementById("signupbtn");
+            let signinbtn = document.getElementById("signinbtn");
+            let nameField = document.getElementById("nameField");
+            let title = document.getElementById("title");
+
+            signinbtn.onclick = function(){
+                nameField.style.maxHeight = "0";
+                title.innerHTML = "Sign In";
+                signupbtn.classList.add("disable");
+                signinbtn.classList.remove("disable");
+            }
+            signupbtn.onclick = function(){
+                nameField.style.maxHeight = "60px";
+                title.innerHTML = "Sign Up";
+                signupbtn.classList.remove("disable");
+                signinbtn.classList.add("disable");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GALLERY</title>
+        <link href="video.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <a href="Assignment.htm"><img src="Logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="biography.htm">Biography</a></li>
+                    <li><a href="Resume.html">Resume</a></li>
+                    <li><a href="Gallery.htm">Gallery</a></li>
+                    <li><a href="Time table.htm#">Time table</a></li>
+                    <li><a href="login.htm">Login</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="container">
+                    <div class="heading">Video Gallery</div>
+                    <div class="video-container">
+                        <div class="video">
+                            <video src="video1.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video2.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video3.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video4.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video5.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video6.MP4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video7.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video8.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video9.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video10.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video11.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video12.mp4"></video>
+                        </div>
+                        <div class="video">
+                            <video src="video13.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var video = document.querySelectorAll('video')
+
+            video.forEach(play => play.addEventListener('click',() =>{
+                play.classList.toggle('active');
+                if(play.paused){
+                    play.play();
+                }
+                else{
+                    play.pause();
+                    play.currentTime = 0;
+                }
+            }));
+        </script>
+    </body>
+</html>

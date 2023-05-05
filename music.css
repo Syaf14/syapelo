@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.banner{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 130px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    height:auto;
+    position: absolute;
+    text-align: center;
+    background: #081b29;
+}
+.content .heading{
+    font-size: 3em;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0.5rem 1rem #000;
+    color: #fff;
+}
+.content .music-container{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.content .music-container .box{
+    height: 16rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem #000;
+    overflow: hidden;
+    margin: 2rem;
+}
+.content .music-container .box .image{
+    height: 100%;
+    width: 25%;
+}
+.content .music-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.content .music-container .box .music{
+    width: 75%;
+}
+.content .music-container .box .music audio{
+    width: 100%;
+    outline: none;
+
+}
+.content .music-container .box .music audio::-webkit-media-controls-eclosure{
+    background: none;
+}
+@media (max-width:600px){
+    .content .music-container .box{
+        height: 27rem;
+        width: 90%;
+        flex-flow: column;
+    }
+    .content .music-container .box .image{
+        height: 80%;
+        width: 100%;
+    }
+    .content .music-container .box .music{
+        height: 80%;
+        width: 100%;
+    }
+}
